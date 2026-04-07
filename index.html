@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Huangshan</title>
+	
+	<link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* 全局 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        /* 背景 */
+        .landing {
+            height: 100%;
+            background: url('images/黄山风景区.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+
+        /* 遮罩（让文字更清楚） */
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+
+            animation: fadeIn 2s ease;
+        }
+
+        /* 标题 */
+        h1 {
+            font-size: 64px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        /* 副标题 */
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* 按钮 */
+        .btn {
+            padding: 14px 40px;
+            font-size: 18px;
+            color: white;
+            border: 2px solid white;
+            text-decoration: none;
+            border-radius: 30px;
+
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        /* 动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="landing">
+    <div class="overlay">
+        <h1>Huangshan</h1>
+        <p>Discover the Beauty of China's Yellow Mountain</p >
+
+        <!-- ⚠️ 这里改成你的首页文件名 -->
+        <a href="home/home-1.html" class="btn">Enter</a >
+    </div>
+</div>
+
+</body>
+</html>
